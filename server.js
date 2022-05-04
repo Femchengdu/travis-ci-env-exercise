@@ -1,14 +1,10 @@
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+const express = require("express");
+const app = express();
 
-async function main() {
-    while (true) {
-        console.log("Microservices rock!");
-        const favoriteFood = process.env.FAVORITE_FOOD;
-        console.log(`My favorite food is ${favoriteFood}`);
-        await sleep(5000);
-    }
-}
+app.listen(8080, () => {
+    console.log("Server running on port 8080");
+});
 
-main();
+app.get("/health", (req, res, next) => {
+    res.status(200).send("Hello!");
+});
