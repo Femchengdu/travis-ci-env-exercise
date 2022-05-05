@@ -15,7 +15,7 @@ spec:
         app: my-app-2
     spec:
       containers:
-      - name: simple-express
+      - name: simple-node
         image: rdevcd2020/simple-node
         ports:
         - containerPort: 8080
