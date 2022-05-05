@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: simple-express
-        image: rdevcd2020/simple-express
+        image: rdevcd2020/simple-node
         ports:
         - containerPort: 8080
         livenessProbe:
